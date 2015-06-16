@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from nose.tools import *
-import NAME
+import gothonweb
 
 def setup():
     print "SETUP!"
