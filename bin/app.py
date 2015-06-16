@@ -11,7 +11,8 @@ urls = (
 
 # Les objets du framework
 app = web.application(urls, globals())
-render = web.template.render('templates/')
+# Toutes les pages seront wrappées dans layout.html
+render = web.template.render('templates/',base="layout")
 
 # Ma page Index, déclarée dans l'urls, avec ces méthodes http
 class Index(object):

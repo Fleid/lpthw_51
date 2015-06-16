@@ -2,18 +2,10 @@ $def with (greeting)
 <!-- the python code is preceded by the dollar sign, including the definition of var-->
 <!-- this code is also indentation sensitive-->
 
-<html>
-	<head>
-		<title>Gothons Of Planet Percal #25</title>
-	</head>
+$if greeting:
+	I just wanted to say <em style="color: green; font-size: 2em;">$greeting</em>.
+$else:
+	<em>Hello</em>, world!
 	
-	<body>
-		$if greeting:
-			I just wanted to say <em style="color: green; font-size: 2em;">$greeting</em>.
-		$else:
-			<em>Hello</em>, world!
-			
-		<br/>	
-		<a href="/hello">back</a>
-	</body>
-</html>
+<br/>	
+<a href="/hello">back</a>
