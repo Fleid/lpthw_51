@@ -15,13 +15,13 @@ render = web.template.render('templates/')
 
 # Ma page Index, déclarée dans l'urls, avec ces méthodes http
 class Index(object):
+	
 	def GET(self):
+		return render.hello_form()
 		
-		#On récupère l'info via l'url : http://localhost:8080/hello?name=Frank
-		form = web.input(name="Nobody") #On donne une valeur par défaut, sinon y'a erreur à l'appel
-		greeting = "Hello, %s" % form.name
-		
-		# La syntaxe magique : render.XXX, XXX le nom du fichier dans \templates
+	def POST(self):
+		form = web.input(name="Nobody", greet="Hello")
+		greeting = "%s, %s" % (form.greet, form.name)
 		return render.index(greeting = greeting)
 
 # Code magique
